@@ -1,0 +1,8 @@
+com\miweb\model\Usuario.class
+com\miweb\servlet\ModificarDatosServlet.class
+com\miweb\registro\web\JakartaRestConfiguration.class
+com\miweb\util\JSONHandler$1.class
+com\miweb\registro\web\resources\JakartaEE11Resource.class
+com\miweb\util\JSONHandler.class
+com\miweb\servlet\LoginServlet.class
+com\miweb\servlet\RegistrationServlet.class

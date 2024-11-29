@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro e Inicio de Sesión</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bienvenido</h1>
+        <div class="form-container">
+            <form id="registroForm" action="RegistrationServlet" method="post">
+                <h2>Registro</h2>
+                <input type="text" name="nombreCompleto" placeholder="Nombre completo" required>
+                <div class="error-message" id="errorNombreCompleto"></div>
+                
+                <input type="email" name="correo" placeholder="Correo electrónico" required>
+                <div class="error-message" id="errorCorreo"></div>
+                
+                <input type="text" name="nombreUsuario" placeholder="Nombre de usuario" required>
+                <div class="error-message" id="errorNombreUsuario"></div>
+                
+                <input type="password" name="contraseña" placeholder="Contraseña" required>
+                <div class="error-message" id="errorContraseña"></div>
+                
+                <input type="password" name="confirmarContraseña" placeholder="Confirmar contraseña" required 
+                       pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" title="La contraseña debe tener al menos 8 caracteres y contener letras y números">
+                <div class="error-message" id="errorConfirmarContraseña"></div>
+                
+                <button type="submit">Registrarse</button>
+            </form>
+
+            <form id="inicioSesionForm" action="login" method="post">
+                <h2>Iniciar Sesión</h2>
+                <input type="text" name="usuario" placeholder="Usuario o Correo" required>
+                <div class="error-message" id="errorUsuario"></div>
+                
+                <input type="password" name="contraseña" placeholder="Contraseña" required>
+                <div class="error-message" id="errorContraseñaLogin"></div>
+                
+                <button type="submit">Iniciar Sesión</button>
+            </form>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
